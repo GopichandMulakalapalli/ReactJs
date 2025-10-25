@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            border: 2px solid goldenrod;
+            background-color: black;
+            margin: 20px;
+            color: white;
+        }
+    </style>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        function CreateContainer(props) {
+            // props ={title:"",content:""}
+            return (
+                <div className="container">
+                    <h1>{props.title} {props.content}</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequatur quo, dicta necessitatibus amet eius nesciunt rerum esse magnam consectetur sapiente. Voluptatem, repellendus aut ea quo eveniet itaque animi molestiae facere, soluta consequuntur, accusamus eligendi! Rem culpa et repellendus omnis quibusdam maxime, minima, veritatis quasi, sed quisquam inventore cumque illum ipsum laudantium quae voluptatibus quaerat? Neque rerum, obcaecati modi voluptate magni voluptatem corrupti reiciendis facere magnam sit eaque, saepe quasi, a perferendis. Quidem, aspernatur? Aliquam consequuntur sit quis quasi odit voluptatibus deleniti expedita sequi dolore quibusdam. Tempore nobis fuga ad. Beatae fugit commodi neque aspernatur similique sequi pariatur numquam ab?</p>
+                    </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div id="app">
+                    <CreateContainer title={"Html Section"} content={100} />
+                    <CreateContainer title={"Css Section"} content={200} />
+                    <CreateContainer title={"Js Section"} content={300} />
+                     <CreateContainer title={"React JS Section"} content={400} />
+                </div>
+            );
+        }
+        ReactDOM.render(<App />,document.getElementById("root"));
+
+    </script>
+</body>
+</html>
